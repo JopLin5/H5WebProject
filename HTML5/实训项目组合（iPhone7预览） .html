@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>实训项目组合（iPhone7预览）</title>
+  <!-- 移动端页面开发 -->
+  <!-- width=device-width:设置设备宽度 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- 引用swiper的样式 -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <!-- 1.引入第三方动画css -->
+  <link rel="stylesheet" href="css/animate.min.css">
+<!--  引入Css样式（页面2.3.4.5的样式）-->
+  <link rel="stylesheet" href="css/page2.css">
+  <link rel="stylesheet" href="css/page3.css">
+  <link rel="stylesheet" href="css/page4.css">
+  <!-- Demo styles -->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 375px;
+      height: 667px;
+		
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+/*	  头标logo样式*/
+	  .top{
+		  width: 376px;
+			height: 51px;
+		  position: absolute;
+			  left:0;
+		  top: 0;
+/*		  层叠覆盖*/
+		  z-index: 100;
+	  }
+	  
+	  
+	  
+/*	  第一页背景图*/
+    #page1{
+      /*设置背景图*/
+      background: url('img/bg1.png');
+      /*去除重复背景*/
+      background-repeat: no-repeat;
+      /*设置背景图大小*/
+      /*background-size:水平方向大小 垂直方向大小 */
+      background-size: 100% 100%;
+      /*背景图填充满整个元素*/
+    }
+	  
+/*	  上图logo图标样式*/
+    #page1 .img1{
+      width: 285px;
+      position: absolute;
+      left: 0;
+      top: 100px;
+    }
+/*	  段落文字样式*/
+    #page1 p{
+      color: gray;
+      font-style: italic;
+      text-align: left;
+      font-size: 18px;
+      position: absolute;
+      left: 0;
+      top: 250px;
+    }
+/*	  段落特效：
+	  自定义z帧:旋转两圈*/
+	  @keyframes move1{
+		  from{
+			  
+			  transform: rotate(0deg);
+		  }
+		  to{
+			  
+			  transform: rotate(360deg);
+		  }
+	  }
+/*	  自定义类名*/
+	  .a{
+		  animation-name: move1;
+	  }
+	  
+	  
+	  
+/*	  下图车样式*/
+	  #page1 .img2{
+      width: 400px;
+      left: 0px;
+	position: absolute;
+      top: 400px;
+    }
+	  
+
+	  
+  </style>
+</head>
+<body>
+	<audio autoplay>
+ 	<source src="music.mp3" >
+	</audio>
+ 
+  <!-- Swiper -->
+  <div class="swiper-container">
+         <!--   表头logo-->
+   <img class="top" src="img/logo.png">
+
+    <div class="swiper-wrapper">
+     
+      <!-- 第一页 -->
+      <div id="page1" class="swiper-slide">
+ 
+<!--    如何在seiper里面使用动画
+      1.给元素添加ani
+      2.给元素添加动画（属性）
+      swiper-animate-effect="动画名"
+      3.动画时间（秒）
+      swiper-animate-duration="时间s"
+      4.延迟时间（秒）
+      swiper-animate-delay="时间s"   -->	
+	
+       <!-- 上图logo图标 -->
+        <img swiper-animate-effect="swing" class="img1 ani" src="img/bg11.png"> 
+
+        <!-- 段落标签 -->
+        <p swiper-animate-effect="a" swiper-animate-duration="2s" class="a ani" >
+          剑拔弩张的对峙，更是英雄相惜的跃跃欲试。<br>驭见高尔夫R-Line，遇见另一个自己。
+        </p>
+        
+<!--      下图车-->
+        <img swiper-animate-effect="bounceInLeft" swiper-animate-duration="2s" class="img2 ani" src="img/car.png">
+        
+      </div>
+      
+      
+       <!-- 第二页 -->
+      <div id="page2" class="swiper-slide">
+<!-- 上图logo1图标-->
+      <img swiper-animate-effect="bounceIn" class="img3 ani" src="img/bg21.png" >
+<!-- 段落文字样式-->
+      <p swiper-animate-effect="zoomInLeft" swiper-animate-duration="1s" class="ani">
+      	设计动感入微，静观已澎湃。<br>
+		风芒展露的前大灯与犀利尾翼呼应，<br>
+		匹配你的运动气质；<br>
+		有如为你度身定制的福特<br>
+		<strong class="a">R-Line标识</strong><br>
+		是你不甘于常规的鲜明印记；<br>
+		更配备精致<strong class="a">17寸铝轮毂</strong><br>
+		与你一同丈量世界！<br>
+      </p>
+      
+<!--下图logo2图标-->
+      <img swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s"
+      class="img4 ani" src="img/car2.png">
+      
+      </div>
+      
+      
+<!-- 第三页 -->
+      <div id="page3" class="swiper-slide">
+     
+<!--上图logo1图标-->
+     <img swiper-animate-effect="rotateInDownRight" class="img5 ani"  src="img/bg31.png">
+
+<!-- 段落文字样式-->
+		  <p  swiper-animate-effect="rotateInUpLeft" class="ani">
+		  	动感要放肆，而环保要克制。<br>
+			搭载<strong class="b">1.4TSI</strong>发动机带来的淋漓快感，<br>
+			满足你释放身心的渴望；<br>
+			配合<strong class="b">手自一体DSG</strong>双离合自动变速器，<br>
+			领先科技更让动力与节能收放自如；<br>
+			多功能运动向盘，更多选择触发无限可能。<br>
+		  </p>
+		  
+<!--下图logo2图标-->
+     <img swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.8s"
+      class="img6 ani"  src="img/fa.png">
+
+       </div>
+       
+       
+       
+<!-- 第四页 -->
+      <div class="swiper-slide" id="page4">
+<!--上图1-->
+          <img  swiper-animate-duration="1s" swiper-animate-effect="slideInUp" 
+          class="ani" id="img1" src="img/bg41.jpg" alt="">
+<!--段落文字-->
+          <p  swiper-animate-duration="1s" swiper-animate-effect="slideInDown" class="ani">
+        品味不拘于形式美学，<br>
+		更将感官体验全面深化。<br>
+		<strong class="c">全新酷热内饰</strong>运动风范一展无余；<br>
+		<strong class="c">双色电加热座椅</strong>真皮质感匹配创新科技，<br>
+		养颜更暖心；每一细微之处。皆是视觉与感触的双重满足，<br>
+		面面俱到的享受。<br>
+
+          </p>
+<!-- 汽车图片 -->
+     
+          <img swiper-animate-daley="5s" swiper-animate-duration="1s" swiper-animate-effect="zoomIn" 
+          class="ani" id="img7" src="img/bg4_1.png" alt="">
+          <img swiper-animate-daley="2s" swiper-animate-duration="1s" swiper-animate-effect="zoomIn" 
+          class="ani" id="img8" src="img/bg4_2.png" alt="">
+      </div>
+
+
+ <!-- 第五页 -->
+     <div class="swiper-slide" id="page5">
+<!-- 上图1-->
+          <img  swiper-animate-duration="1s" swiper-animate-effect="zoomInLeft" 
+          class="ani" id="img11" src="img/bg51.png" alt="">
+<!-- 中间图    -->
+          <img swiper-animate-duration="1s" swiper-animate-effect="zoomInRight" 
+          class="ani" id="img9" src="img/button.png" alt="">
+<!-- 汽车图片 -->
+          <img swiper-animate-daley="1s" swiper-animate-duration="2s" swiper-animate-effect="bounceInLeft" 
+          class="ani" id="img2" src="img/car5.png" alt="" >
+        
+      </div>
+             
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="js/swiper.min.js"></script>
+  <!-- 2.引入动画的js脚本 -->
+  <script src="js/swiper.animate.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    // 1. 引入动画css
+    // 2. 引入动画的js脚本
+    // 3. 初始化动画
+
+    // js初始化代码
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // 3.初始化动画脚本
+      on:{
+        init: function(){
+          swiperAnimateCache(this); //隐藏动画元素 
+          swiperAnimate(this); //初始化完成开始动画
+        }, 
+        slideChangeTransitionEnd: function(){ 
+          swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+        } 
+      }
+    });
+  </script>
+
+</body>
+</html>

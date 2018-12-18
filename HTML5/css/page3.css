@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+  
+	  
+    #page3{
+      /*设置背景图*/
+      background: url(../img/bg3.jpg);
+      /*去除重复背景*/
+      background-repeat: no-repeat;
+      /*设置背景图大小*/
+      /*background-size:水平方向大小 垂直方向大小 */
+      background-size: 100% 100%;
+      /*背景图填充满整个元素*/
+    }
+/*	  上图logo图标样式*/
+    #page3 .img5{	
+		  width: 285px;
+		  position: absolute;
+		  left: 80px;;
+		  top: 50px;
+      
+    }
+/*	  段落文字样式*/
+    #page3 p{
+      color: gray;
+      font-style: italic;
+      text-align: right;
+      font-size: 18px;
+      position: absolute;
+      
+      top: 140px;
+    }
+	 #page3 .b{
+		  color: chocolate;
+	  }
+
+	  
+/*	  下图车样式*/
+	  #page3 .img6{
+      width: 250px;
+      left: 50px;
+	position: absolute;
+      top: 350px;
+    }
+	  
+

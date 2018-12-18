@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*上图*/
+
+#page4{
+      background: url(../img/bg4.jpg);
+      background-size: 375px 667px;
+      position: relative;
+	  background-repeat: no-repeat;
+    }
+    #page5{
+      background: url(../img/bg5.png);
+      background-size: 375px 667px;
+      position: relative;
+	  background-repeat: no-repeat;
+    }
+    
+/*文字*/
+
+#page4 p{
+      position: absolute;
+      left: 5px;;
+      top: 180px;
+      text-align: left;
+      color: gray;
+      font-style: italic;	
+    }
+#page4 .c{
+		  color: chocolate;
+	  }
+    #page5 p{
+      position: absolute;
+      left: 0;
+      top: 180px;
+      text-align: left;
+      color: gray;
+      font-style: italic;
+    }
+   
+
+
+/*下图*/
+
+#img1{
+          width: 380px;
+			position: absolute;
+			left: 0px;
+			top: 70px
+    }    
+    #img2{
+          width: 420px;
+			position: absolute;
+			left: 0;
+			bottom: 100px
+    }    
+    #img3{
+      width: 300px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    
+    #img7{
+          width: 150px;
+			position: absolute;
+			top: 500px;
+			right: 36px;
+      
+    }
+    #img8{
+          width: 145px;
+			position: absolute;
+			left: 30px;
+			top: 405px
+      
+    }
+    #img9{
+          width: 200px;
+			position: absolute;
+			right: 0px;
+			top: 230px;
+    }
+    
+    #img11{
+          width: 310px;
+			position: absolute;
+			left: 0px;
+			top: 85px;
+    }    

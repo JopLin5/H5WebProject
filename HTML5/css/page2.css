@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+#page2{
+      /*设置背景图*/
+      background: url(../img/bg2.jpg);
+      /*去除重复背景*/
+      background-repeat: no-repeat;
+      /*设置背景图大小*/
+      /*background-size:水平方向大小 垂直方向大小 */
+      background-size: 100% 100%;
+      /*背景图填充满整个元素*/
+    }
+/*	  上图logo图标样式*/
+	  #page2 .img3{
+		  width: 285px;
+		  position: absolute;
+		  left: 5px;;
+		  top: 80px;
+	  }
+   
+/*	  段落文字样式*/
+     #page2 p{
+      color: gray;
+      font-style: italic;
+      text-align: left;
+      font-size: 18px;
+      position: absolute;
+      left: 2px;;
+      top: 200px;
+    }
+	  #page2 .a{
+		  color: chocolate;
+	  }
+	  
+	  
+	  #page2 .img4{
+      width: 320px;
+      left:55px;
+	  position: absolute;
+      top: 450px;
+    }
